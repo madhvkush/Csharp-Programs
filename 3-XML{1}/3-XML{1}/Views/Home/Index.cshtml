@@ -1,0 +1,16 @@
+﻿@model List<string>
+@{
+    ViewBag.Title = "Keywords List";
+}
+
+@Html.ActionLink("Add New Keyword", "AddKey")
+@Html.ActionLink("Remove Keyword", "RemoveKey")
+<hr />
+
+@if(Model!=null)
+{ 
+foreach(var key in Model)
+{
+    <label>@key</label><br />
+}
+}

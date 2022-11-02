@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Different time zones Time</h2>
+
+<h3>India:- @Convert.ToDateTime(ViewBag.IndianDate).ToString("dd-MMM-yyyy")  @Convert.ToDateTime(ViewBag.IndianDate).ToString("hh:mm:tt") </h3>
+<h3>Central America:- @Convert.ToDateTime(ViewBag.CentralAmericaDate).ToString("dd-MMM-yyyy hh:mm:tt")</h3>
+<h3>Pacific Zone:- @ViewBag.PacificDate</h3>

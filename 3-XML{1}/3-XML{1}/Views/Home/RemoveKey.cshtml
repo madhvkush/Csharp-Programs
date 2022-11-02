@@ -1,0 +1,23 @@
+﻿@model List<string>
+@{
+    ViewBag.Title = "RemoveKey";
+}
+
+<h2>RemoveKey</h2>
+@if (Convert.ToBoolean(ViewBag.Flag))
+{
+    <script>alert("successfully Removed")</script>
+}
+@using (Html.BeginForm("RemoveKey", "Home", FormMethod.Post))
+{
+    <select name="key">
+        @if (Model != null)
+        {
+            foreach (var key in Model)
+            {
+                <option value='@key'>@key</option>
+            }
+        }
+    </select>
+    <button type="submit">Remove</button>
+}

@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "AddKey";
+}
+
+<h2>AddKey</h2>
+@if (Convert.ToBoolean( ViewBag.Flag))
+{
+    <script>alert("successfully added")</script>
+}
+@using(Html.BeginForm("AddKey","Home",FormMethod.Post))
+{
+    <input type="text" name="key" placeholder="Keyword" /><button type="submit">Add</button>
+    
+}
